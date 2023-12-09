@@ -12,16 +12,21 @@ public class Program2 {
 		Scanner sc = new Scanner(System.in);
 		DepartmentDao departmentDao = DaoFactory.createDepartmentDao();
 		System.out.println();
-
-		/*System.out.println("\n######Test 1: department insert #####");
+		
+		System.out.println("\n##### Test 1: findById department #####");
+		Department department = departmentDao.findById(3);
+		System.out.println(department);
+		
+		
+		
+		/*System.out.println("\n######Test 2: department insert #####");
 		Department newDepartment = new Department(5, "Music");
 		departmentDao.insert(newDepartment);
 		System.out.println("Inserted! New department " + newDepartment.getId());*/
 		
 		System.out.println();
 		
-		System.out.println("\n#####Test 2: update department ####");
-		Department department= new Department();
+		System.out.println("\n#####Test 3: update department ####");
 		department = departmentDao.findById(3);
 		department.setName("Courses");
 		departmentDao.update(department);
