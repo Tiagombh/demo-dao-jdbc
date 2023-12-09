@@ -20,7 +20,7 @@ public class Program2 {
 		
 		
 		/*System.out.println("\n######Test 2: department insert #####");
-		Department newDepartment = new Department(5, "Music");
+		Department newDepartment = new Department(6, "Arts");
 		departmentDao.insert(newDepartment);
 		System.out.println("Inserted! New department " + newDepartment.getId());*/
 		
@@ -31,6 +31,12 @@ public class Program2 {
 		department.setName("Courses");
 		departmentDao.update(department);
 		System.out.println("Update completeded"); 
+		
+		System.out.println("\n ##### Test 4: delete department #####");
+		System.out.print("Enter department for to delete: ");
+		int id = sc.nextInt();
+		departmentDao.deleteById(id);
+		System.out.println("Department deleted");
 	}
 
 }
